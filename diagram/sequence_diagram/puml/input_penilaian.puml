@@ -1,0 +1,136 @@
+@startuml
+!theme plain
+skinparam shadowing false
+skinparam roundcorner 8
+skinparam defaultFontName sans-serif
+skinparam defaultFontColor #0F172A
+skinparam backgroundColor #F8FAFC
+skinparam ArrowColor #475569
+
+skinparam sequence {
+    ArrowColor #475569
+    ActorBorderColor #64748B
+    ActorBackgroundColor #F1F5F9
+    BoxBackgroundColor #FFFFFF
+    BoxBorderColor #64748B
+    DividerBackgroundColor #F1F5F9
+    LifeLineBorderColor #64748B
+    LifeLineBackgroundColor #F1F5F9
+    MessageArrowColor #475569
+    MessageTextColor #0F172A
+    NoteBackgroundColor #FEF9C3
+    NoteBorderColor #CA8A04
+}
+
+title Sequence Diagram - Input Penilaian
+
+actor ":Operator" as OPERATOR
+boundary ":PenilaianFormPage" as FORM
+control ":usePetugasList" as PETUGAS_HOOK
+control ":useCreatePenilaian" as CREATE_HOOK
+entity ":SupabaseDB" as DB
+
+OPERATOR -> FORM : Mengakses /penilaian/baru
+activate OPERATOR
+activate FORM
+
+== Akses Halaman ==
+
+FORM -> PETUGAS_HOOK : query: usePetugasList()
+activate PETUGAS_HOOK
+PETUGAS_HOOK -> DB : SELECT master_petugas WHERE status_aktif = true
+activate DB
+DB --> PETUGAS_HOOK : Array<petugas aktif>
+deactivate DB
+PETUGAS_HOOK --> FORM : daftar petugas
+deactivate PETUGAS_HOOK
+
+FORM --> OPERATOR : Tampilkan form penilaian
+deactivate FORM
+
+== Input Data ==
+
+OPERATOR -> FORM : Pilih petugas
+activate FORM
+note right
+    Dropdown dari daftar petugas aktif
+end note
+
+OPERATOR -> FORM : Pilih periode (bulan, tahun)
+
+loop Input 3 Kriteria Skor
+
+    OPERATOR -> FORM : Input skor_displin_kehadiran
+    FORM -> FORM : Validate: skor >= 0 AND skor <= 100
+    FORM -> FORM : Update preview total_nilai
+
+    OPERATOR -> FORM : Input skor_tanggung_jawab
+    FORM -> FORM : Validate + update preview
+
+    OPERATOR -> FORM : Input skor_kepatuhan
+    FORM -> FORM : Validate + update preview
+
+end
+
+OPERATOR -> FORM : Tambah catatan (opsional)
+
+OPERATOR -> FORM : Submit
+
+== Insert Penilaian ==
+
+FORM -> CREATE_HOOK : mutate(penilaianData)
+deactivate FORM
+
+CREATE_HOOK -> DB : INSERT INTO penilaian
+activate DB
+
+note right
+    Fields:
+    - id_petugas
+    - id_operator (current_user.id)
+    - periode_bulan
+    - periode_tahun
+    - skor_displin_kehadiran
+    - skor_tanggung_jawab
+    - skor_kepatuhan
+    - catatan
+end note
+
+== Auto-Calculate Total ==
+
+DB -> DB : COMPUTE total_nilai = AVG(skor_1, skor_2, skor_3)
+note right
+    Generated column di PostgreSQL:
+    total_nilai DECIMAL GENERATED ALWAYS
+    AS (AVG(skor_1, skor_2, skor_3)) STORED
+end note
+
+alt Sukses
+    DB --> CREATE_HOOK : {id: uuid}
+    deactivate DB
+
+    CREATE_HOOK -> CREATE_HOOK : queryClient.invalidateQueries
+    note right
+        Invalidated:
+        - ['penilaian', 'list']
+    end note
+
+    CREATE_HOOK --> OPERATOR : Success, navigate /penilaian
+    deactivate CREATE_HOOK
+
+else Duplicate Entry Error
+    DB --> CREATE_HOOK : error: duplicate key
+    deactivate DB
+
+    CREATE_HOOK --> OPERATOR : Error: "Penilaian sudah ada"
+    note right
+        UNIQUE constraint:
+        (id_petugas, id_operator,
+        periode_bulan, periode_tahun)
+    end note
+    deactivate CREATE_HOOK
+end
+
+deactivate OPERATOR
+
+@enduml

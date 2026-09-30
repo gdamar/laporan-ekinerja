@@ -1,0 +1,128 @@
+@startuml
+!theme plain
+skinparam shadowing false
+skinparam roundcorner 8
+skinparam defaultFontName sans-serif
+skinparam defaultFontColor #0F172A
+skinparam backgroundColor #F8FAFC
+skinparam ArrowColor #475569
+
+skinparam sequence {
+    ArrowColor #475569
+    ActorBorderColor #64748B
+    ActorBackgroundColor #F1F5F9
+    BoxBackgroundColor #FFFFFF
+    BoxBorderColor #64748B
+    DividerBackgroundColor #F1F5F9
+    LifeLineBorderColor #64748B
+    LifeLineBackgroundColor #F1F5F9
+    MessageArrowColor #475569
+    MessageTextColor #0F172A
+    NoteBackgroundColor #FEF9C3
+    NoteBorderColor #CA8A04
+}
+
+title Sequence Diagram - Approval Cuti
+
+actor ":Operator" as OPERATOR
+actor ":Kepala Sesi" as KEPSES
+boundary ":CutiApprovalPage" as PAGE
+boundary ":CutiCard" as CARD
+control ":useCutiList" as LIST_HOOK
+control ":useApproveCuti" as APPROVE_HOOK
+entity ":SupabaseDB" as DB
+
+== Akses Halaman ==
+
+OPERATOR -> PAGE : Mengakses /cuti/approval
+activate OPERATOR
+activate PAGE
+
+PAGE -> LIST_HOOK : query: useCutiList({status: 'Menunggu'})
+activate LIST_HOOK
+LIST_HOOK -> DB : SELECT cuti WHERE status_approval = 'Menunggu'
+activate DB
+
+alt Role = Operator
+    DB -> DB : RLS: Tampilkan semua cuti
+else Role = Kepala Sesi
+    DB -> DB : RLS: Tampilkan semua cuti
+end
+
+DB --> LIST_HOOK : Array<cuti pending>
+deactivate DB
+LIST_HOOK --> PAGE : Render list
+deactivate LIST_HOOK
+
+PAGE --> OPERATOR : Tampilkan daftar CutiCard
+note right
+    Setiap CutiCard menampilkan:
+    - Nama petugas
+    - Jenis cuti
+    - Tanggal (mulai - selesai)
+    - Alasan
+    - Tombol: Setuju / Tolak / Tangguhkan
+end note
+
+== Proses Approval ==
+
+loop Untuk setiap pengajuan
+
+    PAGE -> CARD : Render individual card
+    CARD --> OPERATOR : Display details
+
+    OPERATOR -> CARD : Klik action button
+
+    alt Aksi = Setuju
+        CARD -> APPROVE_HOOK : mutate({id, status: 'Disetujui'})
+    else Aksi = Tolak
+        CARD -> APPROVE_HOOK : mutate({id, status: 'Tidak Disetujui'})
+    else Aksi = Tangguhkan
+        CARD -> APPROVE_HOOK : mutate({id, status: 'Ditangguhkan'})
+    end
+
+    CARD --> OPERATOR : Show confirmation dialog
+    OPERATOR -> CARD : Konfirmasi
+    deactivate CARD
+
+    == Update Status ==
+
+    APPROVE_HOOK -> DB : UPDATE cuti
+    activate DB
+
+    note right
+        SET status_approval = new_status
+        SET approved_by = current_user.id
+        SET updated_at = NOW()
+    end note
+
+    alt status = 'Disetujui' AND jenis_cuti = 'Tahunan'
+        DB -> DB : UPDATE kuota tracking
+        note right
+            Kurangi sisa_kuota
+            berdasarkan jumlah hari cuti
+        end note
+    end
+
+    DB --> APPROVE_HOOK : {id, status_approval: updated}
+    deactivate DB
+
+    APPROVE_HOOK -> LIST_HOOK : queryClient.invalidateQueries
+    note right
+        Invalidated:
+        - ['cuti', 'list']
+        - ['cuti', 'detail', id]
+    end note
+
+    APPROVE_HOOK --> OPERATOR : Show success toast
+    deactivate APPROVE_HOOK
+
+    PAGE --> OPERATOR : Refresh list (auto)
+    activate PAGE
+
+end
+
+deactivate PAGE
+deactivate OPERATOR
+
+@enduml

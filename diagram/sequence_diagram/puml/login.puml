@@ -1,0 +1,65 @@
+@startuml
+!theme plain
+skinparam shadowing false
+skinparam roundcorner 8
+skinparam defaultFontName sans-serif
+skinparam defaultFontColor #0F172A
+skinparam backgroundColor #F8FAFC
+skinparam ArrowColor #475569
+
+skinparam sequence {
+    ArrowColor #475569
+    ActorBorderColor #64748B
+    ActorBackgroundColor #F1F5F9
+    BoxBackgroundColor #FFFFFF
+    BoxBorderColor #64748B
+    DividerBackgroundColor #F1F5F9
+    LifeLineBorderColor #64748B
+    LifeLineBackgroundColor #F1F5F9
+    MessageArrowColor #475569
+    MessageTextColor #0F172A
+    NoteBackgroundColor #FEF9C3
+    NoteBorderColor #CA8A04
+    ParticipantBackgroundColor transparent
+    ParticipantBorderColor transparent
+}
+
+title Sequence Diagram - Login
+
+actor ":Petugas" as PETUGAS
+boundary ":LoginPage" as LOGIN
+control ":AuthContext" as AUTH
+control ":SupabaseAuth" as SUPA_AUTH
+entity ":SupabaseDB" as SUPA_DB
+
+PETUGAS -> LOGIN : Mengakses /login
+activate PETUGAS
+activate LOGIN
+LOGIN -> AUTH : signIn(email, password)
+deactivate LOGIN
+
+AUTH -> SUPA_AUTH : signIn(email, password)
+activate SUPA_AUTH
+
+alt Autentikasi Berhasil
+    SUPA_AUTH --> AUTH : session {user, token}
+    deactivate SUPA_AUTH
+
+    AUTH -> SUPA_DB : SELECT master_petugas WHERE email = email
+    activate SUPA_DB
+    SUPA_DB --> AUTH : profile record
+    deactivate SUPA_DB
+
+    AUTH --> PETUGAS : Login berhasil, navigate /dashboard
+    deactivate AUTH
+
+else Autentikasi Gagal
+    SUPA_AUTH --> AUTH : error {message}
+    deactivate SUPA_AUTH
+    AUTH --> PETUGAS : Tampilkan error message
+    deactivate AUTH
+end
+
+deactivate PETUGAS
+
+@enduml
