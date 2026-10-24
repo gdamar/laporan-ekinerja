@@ -1,6 +1,19 @@
 # Sequence Diagram - Approval Cuti
 # Sistem E-Kinerja
 
+## Diagram Alternative Case
+
+Diagram gabungan tetap tersedia di `puml/approval_cuti.puml`. Untuk memisahkan alternative case, gunakan diagram berikut:
+
+| Alternative case | Diagram |
+|---|---|
+| Overview approval cuti | [`approval_cuti_overview.puml`](../puml/approval_cuti_overview.puml) |
+| Setujui pengajuan | [`approval_cuti_setujui.puml`](../puml/approval_cuti_setujui.puml) |
+| Tolak pengajuan | [`approval_cuti_tolak.puml`](../puml/approval_cuti_tolak.puml) |
+| Tangguhkan pengajuan | [`approval_cuti_tangguhkan.puml`](../puml/approval_cuti_tangguhkan.puml) |
+
+Diagram detail mengulang konteks akses halaman dan pengambilan daftar cuti pending supaya masing-masing diagram dapat dibaca secara mandiri.
+
 ## PlantUML
 
 ```plantuml

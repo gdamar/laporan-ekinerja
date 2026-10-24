@@ -2,4 +2,6 @@
 .~lock.*
 ~$*
 ~*
+__pycache__
+*.drawio.bkp
 __MACOSX/
