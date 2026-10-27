@@ -291,7 +291,7 @@
         <mxCell id="p_OPERATOR" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Operator" vertex="1">
           <mxGeometry height="80" width="40" x="120" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="l_OPERATOR" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;">
+        <mxCell id="l_OPERATOR" edge="1" parent="1" source="act_OPERATOR_ACTOR" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="140" y="140" as="sourcePoint" />
             <mxPoint x="140" y="1690" as="targetPoint" />
@@ -351,6 +351,18 @@
         <mxCell id="act_approval_cuti_DATABASE" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
           <mxGeometry height="1126" width="16" x="1012" y="298" as="geometry" />
         </mxCell>
+        <mxCell id="act_KEPSES_ACTOR" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
+          <mxGeometry height="1450" width="16" x="352" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="MAhOplPSUONoGEc9jO0_-1" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" target="act_OPERATOR_ACTOR" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="140" as="sourcePoint" />
+            <mxPoint x="140" y="1690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act_OPERATOR_ACTOR" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
+          <mxGeometry height="1450" width="16" x="132" y="190" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -359,6 +371,9 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="b_9" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" value="loop Input 3 Kriteria Skor" vertex="1">
+          <mxGeometry height="460" width="1100" x="50" y="630" as="geometry" />
+        </mxCell>
         <mxCell id="m_0" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="act_input_penilaian_FEATURE">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="140" y="178" as="sourcePoint" />
@@ -464,20 +479,10 @@
             <mxPoint x="360" y="730" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ml_11" connectable="0" parent="m_11" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Memvalidasi input" vertex="1">
-          <mxGeometry relative="1" y="30" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="m_12" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="360" y="790" as="sourcePoint" />
             <mxPoint x="360" y="790" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ml_12" connectable="0" parent="m_12" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Memproses perubahan" vertex="1">
-          <mxGeometry relative="1" y="30" as="geometry">
-            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="m_13" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;">
@@ -497,11 +502,6 @@
             <mxPoint x="360" y="910" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ml_14" connectable="0" parent="m_14" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Memvalidasi input" vertex="1">
-          <mxGeometry relative="1" y="30" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="m_15" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="140" y="970" as="sourcePoint" />
@@ -518,14 +518,6 @@
             <mxPoint x="360" y="1030" as="sourcePoint" />
             <mxPoint x="360" y="1030" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="ml_16" connectable="0" parent="m_16" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Memvalidasi input" vertex="1">
-          <mxGeometry relative="1" y="30" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="b_9" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" value="loop Input 3 Kriteria Skor" vertex="1">
-          <mxGeometry height="460" width="1100" x="50" y="630" as="geometry" />
         </mxCell>
         <mxCell id="m_18" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;">
           <mxGeometry relative="1" as="geometry">
@@ -655,7 +647,7 @@
         <mxCell id="p_OPERATOR" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Operator" vertex="1">
           <mxGeometry height="80" width="40" x="120" y="67.5" as="geometry" />
         </mxCell>
-        <mxCell id="l_OPERATOR" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;">
+        <mxCell id="l_OPERATOR" edge="1" parent="1" source="act_OPERATOR_ACTOR" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="140" y="140" as="sourcePoint" />
             <mxPoint x="140" y="1770" as="targetPoint" />
@@ -706,91 +698,23 @@
         <mxCell id="rGtNaXf-i7k6R0PF7Sjx-7" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;span style=&quot;color: rgb(255, 255, 255); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Database&lt;/span&gt;" vertex="1">
           <mxGeometry height="25" width="80" x="758" y="135" as="geometry" />
         </mxCell>
+        <mxCell id="x6Np4QXy9rav3SgqNK1h-1" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" target="act_OPERATOR_ACTOR" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="140" as="sourcePoint" />
+            <mxPoint x="140" y="1770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act_OPERATOR_ACTOR" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
+          <mxGeometry height="1530" width="16" x="132" y="190" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="page_2" name="kelola_tugas">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1200" pageHeight="1340" math="0" shadow="0">
+    <mxGraphModel dx="392" dy="343" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1340" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="m_0" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="170" as="sourcePoint" />
-            <mxPoint x="360" y="170" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ml_0" connectable="0" parent="m_0" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Mengakses fitur" vertex="1">
-          <mxGeometry relative="1" y="30" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="m_1" edge="1" parent="1" style="endArrow=block;html=1;dashed=1;endFill=1;endSize=8;">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="360" y="230" as="sourcePoint" />
-            <mxPoint x="140" y="230" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ml_1" connectable="0" parent="m_1" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Menampilkan informasi" vertex="1">
-          <mxGeometry relative="1" y="30" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="m_2" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="290" as="sourcePoint" />
-            <mxPoint x="360" y="290" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ml_2" connectable="0" parent="m_2" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Mengirim input pengguna" vertex="1">
-          <mxGeometry relative="1" y="30" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="m_4" edge="1" parent="1" style="endArrow=block;html=1;dashed=1;endFill=1;endSize=8;">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="360" y="350" as="sourcePoint" />
-            <mxPoint x="140" y="350" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ml_4" connectable="0" parent="m_4" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Memproses permintaan" vertex="1">
-          <mxGeometry relative="1" y="30" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="m_5" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="410" as="sourcePoint" />
-            <mxPoint x="360" y="410" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ml_5" connectable="0" parent="m_5" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Meminta data" vertex="1">
-          <mxGeometry relative="1" y="30" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="m_6" edge="1" parent="1" style="endArrow=block;html=1;dashed=1;endFill=1;endSize=8;">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="360" y="470" as="sourcePoint" />
-            <mxPoint x="140" y="470" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ml_6" connectable="0" parent="m_6" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Mengirim input pengguna" vertex="1">
-          <mxGeometry relative="1" y="30" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="m_7" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="530" as="sourcePoint" />
-            <mxPoint x="360" y="530" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ml_7" connectable="0" parent="m_7" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Mengirim input pengguna" vertex="1">
-          <mxGeometry relative="1" y="30" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="m_8" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="360" y="590" as="sourcePoint" />
@@ -913,7 +837,7 @@
         <mxCell id="p_KEPSES" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Kepala Sesi" vertex="1">
           <mxGeometry height="80" width="40" x="123" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="l_KEPSES" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;">
+        <mxCell id="l_KEPSES" edge="1" parent="1" source="act_KEPSES_ACTOR" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="140" y="140" as="sourcePoint" />
             <mxPoint x="140" y="1260" as="targetPoint" />
@@ -964,11 +888,97 @@
         <mxCell id="act_kelola_tugas_DATABASE" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
           <mxGeometry height="396" width="16" x="792" y="658" as="geometry" />
         </mxCell>
+        <mxCell id="m_0" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="act_kelola_tugas_FEATURE">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="148" y="178" as="sourcePoint" />
+            <mxPoint x="368" y="178" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ml_0" connectable="0" parent="m_0" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Mengakses fitur" vertex="1">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m_1" edge="1" parent="1" source="act_kelola_tugas_FEATURE" style="endArrow=block;html=1;dashed=1;endFill=1;endSize=8;entryX=0.957;entryY=0.051;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.042;exitY=0.127;exitDx=0;exitDy=0;exitPerimeter=0;" target="act_KEPSES_ACTOR">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="230" as="sourcePoint" />
+            <mxPoint x="140" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ml_1" connectable="0" parent="m_1" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Menampilkan informasi" vertex="1">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m_2" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;entryX=0.013;entryY=0.27;entryDx=0;entryDy=0;entryPerimeter=0;" target="act_kelola_tugas_FEATURE">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="290" as="sourcePoint" />
+            <mxPoint x="360" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ml_2" connectable="0" parent="m_2" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Mengirim input pengguna" vertex="1">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m_4" edge="1" parent="1" source="act_kelola_tugas_FEATURE" style="endArrow=block;html=1;dashed=1;endFill=1;endSize=8;exitX=-0.037;exitY=0.415;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.093;entryY=0.169;entryDx=0;entryDy=0;entryPerimeter=0;" target="act_KEPSES_ACTOR">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="350" as="sourcePoint" />
+            <mxPoint x="140" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ml_4" connectable="0" parent="m_4" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Memproses permintaan" vertex="1">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint y="-31" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m_5" edge="1" parent="1" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;entryX=-0.004;entryY=0.557;entryDx=0;entryDy=0;entryPerimeter=0;" target="act_kelola_tugas_FEATURE">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="410" as="sourcePoint" />
+            <mxPoint x="360" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ml_5" connectable="0" parent="m_5" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Meminta data" vertex="1">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint x="-10" y="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m_6" edge="1" parent="1" source="act_kelola_tugas_FEATURE" style="endArrow=block;html=1;dashed=1;endFill=1;endSize=8;exitX=-0.062;exitY=0.704;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.125;entryY=0.286;entryDx=0;entryDy=0;entryPerimeter=0;" target="act_KEPSES_ACTOR">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="470" as="sourcePoint" />
+            <mxPoint x="140" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ml_6" connectable="0" parent="m_6" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Mengirim input pengguna" vertex="1">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint y="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m_7" edge="1" parent="1" source="act_KEPSES_ACTOR" style="endArrow=block;html=1;dashed=0;endFill=1;endSize=8;entryX=0.021;entryY=0.846;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.063;exitY=0.344;exitDx=0;exitDy=0;exitPerimeter=0;" target="act_kelola_tugas_FEATURE">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="530" as="sourcePoint" />
+            <mxPoint x="360" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ml_7" connectable="0" parent="m_7" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];" value="Mengirim input pengguna" vertex="1">
+          <mxGeometry relative="1" y="30" as="geometry">
+            <mxPoint y="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZL8mXk0i-69Sl7hkfcWn-1" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" target="act_KEPSES_ACTOR" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="140" as="sourcePoint" />
+            <mxPoint x="140" y="1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act_KEPSES_ACTOR" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
+          <mxGeometry height="1020" width="16" x="132" y="178" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="page_3" name="login">
-    <mxGraphModel dx="565" dy="494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="870" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1200" pageHeight="870" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1168,6 +1178,9 @@
             </Array>
             <mxPoint x="145" y="250" as="sourcePoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="act_PETUGAS_ACTOR" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
+          <mxGeometry height="550" width="16" x="132" y="190" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -1535,6 +1548,9 @@
         <mxCell id="act_pengajuan_cuti_DATABASE" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
           <mxGeometry height="1356" width="16" x="792" y="298" as="geometry" />
         </mxCell>
+        <mxCell id="act_PETUGAS_ACTOR" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
+          <mxGeometry height="1620" width="16" x="132" y="190" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -1865,6 +1881,9 @@
             <mxPoint y="30" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="act_PETUGAS_ACTOR" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
+          <mxGeometry height="1580" width="16" x="132" y="190" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -2018,6 +2037,9 @@
           <mxGeometry relative="1" y="30" as="geometry">
             <mxPoint x="10" y="-35" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="act_actor_ACTOR" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
+          <mxGeometry height="520" width="16" x="122" y="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -2250,6 +2272,9 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="act_actor_ACTOR" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
+          <mxGeometry height="1120" width="16" x="122" y="217" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -2467,6 +2492,9 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="act_actor_ACTOR" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
+          <mxGeometry height="1120" width="16" x="122" y="180" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -2683,6 +2711,9 @@
           <mxGeometry relative="1" y="30" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="act_actor_ACTOR" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=100;" value="" vertex="1">
+          <mxGeometry height="1120" width="16" x="122" y="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

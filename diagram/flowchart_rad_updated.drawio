@@ -1,0 +1,93 @@
+<mxfile host="Electron">
+  <diagram id="rad-flow" name="Flowchart RAD">
+    <mxGraphModel dx="983" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="identification" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;" value="Identifikasi dan&lt;br&gt;Perumusan Masalah" vertex="1">
+          <mxGeometry height="70" width="240" x="465" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="literature" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;" value="Studi Literatur" vertex="1">
+          <mxGeometry height="60" width="160" x="505" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="rad" parent="1" style="swimlane;html=1;startSize=30;fillColor=none;strokeColor=#000000;fontColor=#000000;fontStyle=1;horizontal=0;" value="Melaksanakan Metode RAD" vertex="1">
+          <mxGeometry height="900" width="540" x="315" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="requirements" parent="rad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;" value="Requirements Planning&lt;br&gt;(Penentuan Persyaratan Proyek)" vertex="1">
+          <mxGeometry height="90" width="175" x="182" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="user-design" parent="rad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;" value="User Design&lt;br&gt;(Perancangan UML)" vertex="1">
+          <mxGeometry height="90" width="175" x="182" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="construction" parent="rad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;" value="Construction&lt;br&gt;(Konstruksi Cepat &amp;amp;&lt;br&gt;Pengumpulan Feedback)" vertex="1">
+          <mxGeometry height="90" width="175" x="182" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="H_tvsZKzcJQbUm126D2e-1" edge="1" parent="rad" source="approved" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="construction">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="125" y="550" />
+              <mxPoint x="125" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H_tvsZKzcJQbUm126D2e-2" connectable="0" parent="H_tvsZKzcJQbUm126D2e-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Tidak" vertex="1">
+          <mxGeometry relative="1" x="-0.1015" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="approved" parent="rad" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontStyle=1;" value="Sesuai?" vertex="1">
+          <mxGeometry height="100" width="130" x="205" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="cutover" parent="rad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;" value="Cutover&lt;br&gt;(Pengujian dan Implementasi)" vertex="1">
+          <mxGeometry height="90" width="175" x="182" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="e-requirements-design" edge="1" parent="rad" source="requirements" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;endFill=1;" target="user-design">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-design-construction" edge="1" parent="rad" source="user-design" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;endFill=1;" target="construction">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-construction-approved" edge="1" parent="rad" source="construction" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;endFill=1;" target="approved">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-approved-yes" edge="1" parent="rad" source="approved" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;endFill=1;" target="cutover" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conclusion" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;" value="Kesimpulan" vertex="1">
+          <mxGeometry height="60" width="160" x="505" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="suggestion" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;" value="Saran" vertex="1">
+          <mxGeometry height="60" width="160" x="505" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="e-start-identification" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;endFill=1;" target="identification">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="585" y="140" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-identification-literature" edge="1" parent="1" source="identification" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;endFill=1;" target="literature">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-literature-requirements" edge="1" parent="1" source="literature" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;endFill=1;" target="requirements">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-cutover-conclusion" edge="1" parent="1" source="cutover" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;endFill=1;" target="conclusion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-conclusion-suggestion" edge="1" parent="1" source="conclusion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;endFill=1;" target="suggestion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-suggestion-stop" edge="1" parent="1" source="suggestion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="585" y="1580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H_tvsZKzcJQbUm126D2e-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=100;strokeWidth=1;fillColor=none;" value="Mulai" vertex="1">
+          <mxGeometry height="60" width="175" x="497.5" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="H_tvsZKzcJQbUm126D2e-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=100;strokeWidth=1;fillColor=none;" value="Selesai" vertex="1">
+          <mxGeometry height="60" width="175" x="497.5" y="1580" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
