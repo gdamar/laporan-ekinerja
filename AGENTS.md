@@ -40,9 +40,13 @@ Follow the notation rules in `diagram/diagram.md`:
   `shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;labelPerimeter=1;`
 - Use solid arrows for primary messages and dashed/open arrows for responses.
 - Use `alt` frames for alternatives; do not represent alternatives with flowchart diamonds.
+- Format penulisan nama alternative frame: shape frame bernilai murni `alt` (atau `loop`), dan label nama kasus dibungkus tanda kurung siku (misal `[Tambah]`, `[Ubah]`, `[Hapus]`, `[Pengajuan sesuai kriteria?]`) diletakkan di sebelah label `alt` sebagai elemen teks independen (child text element).
+- Activation boxes tidak boleh dibuat memanjang tunggal (monolitik), melainkan harus disegmentasi sesuai estimasi durasi dan fase aktif interaksi proses (idle saat menunggu respon atau di luar transaksi Database).
+- Pastikan panjang panah pesan presisi dan terhubung (*hooked*) langsung dari sisi activation box pengirim ke activation box penerima tanpa melayang (*dangling*). Teks pesan diposisikan tepat di atas garis panah.
 - Keep each diagram to a maximum of four objects: actor, boundary, control, and entity.
 - Use general, readable message descriptions rather than implementation-specific wording.
 - Use `Sistem` for the control object and `Database` for the entity object unless the existing diagram requires otherwise.
+- Tinjau dan perbarui dokumen review di `diagram/sequence_diagram/sequence_rad_revised-review.md` setiap kali menyelesaikan iterasi perbaikan sequence diagram.
 
 PlantUML sources belong in `diagram/sequence_diagram/puml/`; keep corresponding documentation and rendered diagrams synchronized.
 
