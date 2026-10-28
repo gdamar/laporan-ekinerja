@@ -36,6 +36,8 @@ Use the existing activity diagrams and reference images as the layout and naming
 Follow the notation rules in `diagram/diagram.md`:
 
 - Use UML stereotypes: `actor`, `boundary`, `control`, and `entity`.
+- Gunakan shape `umlActor` untuk objek aktor pada diagram Draw.io dengan style:
+  `shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;labelPerimeter=1;`
 - Use solid arrows for primary messages and dashed/open arrows for responses.
 - Use `alt` frames for alternatives; do not represent alternatives with flowchart diamonds.
 - Keep each diagram to a maximum of four objects: actor, boundary, control, and entity.
