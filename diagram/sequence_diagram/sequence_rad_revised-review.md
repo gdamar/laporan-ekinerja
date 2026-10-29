@@ -138,3 +138,10 @@ Perbaikan iterasi ke-3 telah diimplementasikan pada berkas [sequence_rad_revised
      - Outer frame `alt [Terdapat data pengajuan banding?]` diperluas dan melingkupi inner frame secara sempurna tanpa tabrakan batas.
      - Inner frame `alt [Pengajuan sesuai kriteria?]` ditata rapi dengan pembatas garis putus-putus dan label `else` di koordinat yang presisi.
    - Lifeline diperpanjang hingga batas bawah diagram (`y=1400`) agar proporsional dan tidak terpotong.
+
+# Sequence Diagram Review - Iterasi #4 (Intervensi Manual)
+
+## Page Kelola Petugas, Akun, Tugas
+
+- [ ] Cari referensi terkait penulisan request sama response
+- [-] fah
