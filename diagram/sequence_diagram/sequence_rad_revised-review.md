@@ -133,7 +133,7 @@ Perbaikan iterasi ke-3 telah diimplementasikan pada berkas [sequence_rad_revised
    - **Perapihan Geometri & Urutan Kronologis (Y-Ordering)**:
      - Mengurutkan posisi Y seluruh 21 pesan dan respon secara strictly monotonic tanpa ada panah yang mendahului proses dependensinya (Database mengembalikan data pengajuan terlebih dahulu sebelum Fitur Penilaian menampilkannya ke Operator).
      - Menghubungkan seluruh panah pesan/respon secara horizontal sempurna langsung ke activation box terkait (`source` dan `target` terhubung presisi tanpa offset manual usang).
-     - Menambahkan panah respon dari Database ke Sistem pada cabang penolakan (*"Operasi berhasil"*) sebelum menampilkan notifikasi ditolak ke Operator.
+     - Menambahkan panah respon dari Database ke Sistem pada cabang penolakan (_"Operasi berhasil"_) sebelum menampilkan notifikasi ditolak ke Operator.
    - **Nesting Frame Alternatif Proporsional**:
      - Outer frame `alt [Terdapat data pengajuan banding?]` diperluas dan melingkupi inner frame secara sempurna tanpa tabrakan batas.
      - Inner frame `alt [Pengajuan sesuai kriteria?]` ditata rapi dengan pembatas garis putus-putus dan label `else` di koordinat yang presisi.
@@ -141,7 +141,14 @@ Perbaikan iterasi ke-3 telah diimplementasikan pada berkas [sequence_rad_revised
 
 # Sequence Diagram Review - Iterasi #4 (Intervensi Manual)
 
+> [!IMPORTANT]
+> Term progress laporan diganti jadi status pengerjaan di setiap dokumen dan diagram
+
 ## Page Kelola Petugas, Akun, Tugas
 
 - [ ] Cari referensi terkait penulisan request sama response
-- [-] fah
+- [ ] Cover alternative case dari operasi CRUD
+
+## Page Approval Cuti
+
+- [ ] Gabung operasi View, Aprroved dan Decline menjadi satu diagram
