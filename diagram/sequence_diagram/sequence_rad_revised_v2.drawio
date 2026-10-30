@@ -386,10 +386,40 @@
     </mxGraphModel>
   </diagram>
   <diagram id="page_submit_progress_tugas" name="submit_laporan_tugas">
-    <mxGraphModel dx="621" dy="396" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" background="#FFFFFF" math="0" shadow="0">
+    <mxGraphModel dx="1178" dy="741" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="lifeline_1" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;strokeColor=#000000;endArrow=none;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="155" as="sourcePoint" />
+            <mxPoint x="320" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act_prog_bound" parent="1" style="fillColor=#dae8fc;strokeColor=#000000;opacity=100;" value="" vertex="1">
+          <mxGeometry height="360" width="16" x="312" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="frame_0" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;container=1;pointerEvents=0;fillColor=none;strokeColor=#000000;fontColor=#000000;boundedLbl=1;verticalAlign=top;align=left;spacingLeft=8;spacingTop=4;" value="loop" vertex="1">
+          <mxGeometry height="220" width="780" x="40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="7XGZo4IcKj7AFmJae3K9-1" parent="frame_0" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#FFFFFF);" value="&lt;span style=&quot;&quot;&gt;[Setiap status pengerjaan (Sebelum/Dalam Pengerjaan/ Sesudah)]&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="210" x="70" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="act_prog_db_2" parent="frame_0" style="fillColor=#dae8fc;strokeColor=#000000;opacity=100;" value="" vertex="1">
+          <mxGeometry height="40" width="16" x="712" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2iQVd36ZUtYxJH76zAWE-8" parent="frame_0" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="283" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="message_5" edge="1" parent="frame_0" style="edgeStyle=none;html=1;dashed=1;strokeColor=#000000;endArrow=open;endFill=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" value="Menampilkan form laporan">
+          <mxGeometry relative="1" x="-0.0002" as="geometry">
+            <Array as="points">
+              <mxPoint x="72" y="155" />
+            </Array>
+            <mxPoint x="274" y="155" as="sourcePoint" />
+            <mxPoint x="70" y="154.99999999999704" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#000000;fontSize=18;fontStyle=1;align=center;verticalAlign=middle;" value="Sequence Diagram - Submit Progress Tugas" vertex="1">
           <mxGeometry height="40" width="1200" x="40" y="20" as="geometry" />
         </mxCell>
@@ -404,12 +434,6 @@
         </mxCell>
         <mxCell id="participant_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontStyle=1;" value="Form Laporan Tugas Harian" vertex="1">
           <mxGeometry height="45" width="90" x="275" y="110" as="geometry" />
-        </mxCell>
-        <mxCell id="lifeline_1" edge="1" parent="1" style="edgeStyle=none;html=1;dashed=1;strokeColor=#000000;endArrow=none;" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="320" y="155" as="sourcePoint" />
-            <mxPoint x="320" y="750" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="participant_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontStyle=1;" value="Sistem" vertex="1">
           <mxGeometry height="45" width="90" x="495" y="110" as="geometry" />
@@ -432,23 +456,11 @@
         <mxCell id="act_prog_actor" parent="1" style="fillColor=#dae8fc;strokeColor=#000000;opacity=100;" value="" vertex="1">
           <mxGeometry height="360" width="16" x="92" y="295" as="geometry" />
         </mxCell>
-        <mxCell id="act_prog_bound" parent="1" style="fillColor=#dae8fc;strokeColor=#000000;opacity=100;" value="" vertex="1">
-          <mxGeometry height="80" width="16" x="312" y="295" as="geometry" />
-        </mxCell>
         <mxCell id="act_prog_sys" parent="1" style="fillColor=#dae8fc;strokeColor=#000000;opacity=100;" value="" vertex="1">
           <mxGeometry height="280" width="16" x="532" y="375" as="geometry" />
         </mxCell>
         <mxCell id="act_prog_db_1" parent="1" style="fillColor=#dae8fc;strokeColor=#000000;opacity=100;" value="" vertex="1">
           <mxGeometry height="60" width="16" x="752" y="455" as="geometry" />
-        </mxCell>
-        <mxCell id="act_prog_db_2" parent="1" style="fillColor=#dae8fc;strokeColor=#000000;opacity=100;" value="" vertex="1">
-          <mxGeometry height="40" width="16" x="752" y="575" as="geometry" />
-        </mxCell>
-        <mxCell id="frame_0" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;container=1;pointerEvents=0;fillColor=none;strokeColor=#000000;fontColor=#000000;boundedLbl=1;verticalAlign=top;align=left;spacingLeft=8;spacingTop=4;" value="loop" vertex="1">
-          <mxGeometry height="220" width="780" x="40" y="500" as="geometry" />
-        </mxCell>
-        <mxCell id="7XGZo4IcKj7AFmJae3K9-1" parent="frame_0" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#FFFFFF);" value="&lt;span style=&quot;text-align: left;&quot;&gt;[Setiap status pengerjaan]&lt;/span&gt;" vertex="1">
-          <mxGeometry height="30" width="165" x="70" as="geometry" />
         </mxCell>
         <mxCell id="message_0" edge="1" parent="1" source="act_prog_actor" style="edgeStyle=none;html=1;strokeColor=#000000;endArrow=block;endFill=1;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" target="act_prog_bound" value="Pilih tugas harian">
           <mxGeometry relative="1" as="geometry">
@@ -456,7 +468,7 @@
             <mxPoint x="320" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="message_1" edge="1" parent="1" source="act_prog_bound" style="edgeStyle=none;html=1;strokeColor=#000000;endArrow=block;endFill=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="act_prog_sys" value="Mengirim data laporan">
+        <mxCell id="message_1" edge="1" parent="1" source="act_prog_bound" style="edgeStyle=none;html=1;strokeColor=#000000;endArrow=block;endFill=1;exitX=1;exitY=0.222;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" target="act_prog_sys" value="Mengirim data laporan">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="320" y="370" as="sourcePoint" />
             <mxPoint x="540" y="370" as="targetPoint" />
@@ -468,22 +480,16 @@
             <mxPoint x="752" y="455" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="message_3" edge="1" parent="1" source="act_prog_db_1" style="edgeStyle=none;html=1;dashed=1;strokeColor=#000000;endArrow=open;endFill=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="act_prog_sys" value="Data progress tersimpan">
+        <mxCell id="message_3" edge="1" parent="1" source="act_prog_db_1" style="edgeStyle=none;html=1;dashed=1;strokeColor=#000000;endArrow=open;endFill=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="act_prog_sys" value="Data laporan tersimpan">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="760" y="510" as="sourcePoint" />
             <mxPoint x="540" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="message_4" edge="1" parent="1" source="act_prog_sys" style="edgeStyle=none;html=1;strokeColor=#000000;endArrow=block;endFill=1;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1.024;exitY=0.716;exitDx=0;exitDy=0;exitPerimeter=0;" target="act_prog_db_2" value="Update status pengerjaan">
+        <mxCell id="message_4" edge="1" parent="1" source="act_prog_sys" style="edgeStyle=none;html=1;strokeColor=#000000;endArrow=block;endFill=1;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=0.991;exitY=0.629;exitDx=0;exitDy=0;exitPerimeter=0;" target="act_prog_db_2" value="Update status pengerjaan">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="540" y="580" as="sourcePoint" />
             <mxPoint x="760" y="580" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="message_5" edge="1" parent="1" source="act_prog_sys" style="edgeStyle=none;html=1;dashed=1;strokeColor=#000000;endArrow=open;endFill=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="act_prog_actor" value="Mengirim pesan sukses">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="540" y="650" as="sourcePoint" />
-            <mxPoint x="100" y="650" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="2iQVd36ZUtYxJH76zAWE-1" edge="1" parent="1" style="edgeStyle=none;html=1;strokeColor=#000000;endArrow=block;endFill=1;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" value="Input data laporan">
@@ -504,16 +510,16 @@
             <mxPoint x="545" y="375" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2iQVd36ZUtYxJH76zAWE-8" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="40" width="10" x="320" y="600" as="geometry" />
-        </mxCell>
-        <mxCell id="2iQVd36ZUtYxJH76zAWE-9" edge="1" parent="1" style="html=1;align=left;spacingLeft=2;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="2iQVd36ZUtYxJH76zAWE-8" value="Update status dan refresh form">
-          <mxGeometry relative="1" x="0.0667" as="geometry">
+        <mxCell id="2iQVd36ZUtYxJH76zAWE-9" edge="1" parent="1" source="act_prog_bound" style="html=1;align=left;spacingLeft=2;endArrow=block;edgeStyle=orthogonalEdgeStyle;rounded=0;defaultLabelBackgroundColor=page;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="2iQVd36ZUtYxJH76zAWE-8" value="Update status dan refresh form">
+          <mxGeometry relative="1" x="0.0781" y="8" as="geometry">
+            <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="355" y="580" />
-              <mxPoint x="355" y="610" />
+              <mxPoint x="328" y="570" />
+              <mxPoint x="372" y="570" />
+              <mxPoint x="372" y="610" />
             </Array>
-            <mxPoint x="320" y="580" as="sourcePoint" />
+            <mxPoint x="340.0000000000001" y="495" as="sourcePoint" />
+            <mxPoint x="345.0000000000001" y="630" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
