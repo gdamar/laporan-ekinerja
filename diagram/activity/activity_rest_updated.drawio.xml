@@ -1,4 +1,4 @@
-<mxfile host="Electron" pages="5">
+<mxfile host="Electron" pages="14">
   <diagram name="Kelola Tugas" id="311314e2-6c58-4a56-a922-e491faddd214">
     <mxGraphModel dx="1420" dy="1205" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -565,7 +565,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Kelola Penilaian" id="4af94416-bcf0-44ae-a9bd-2b3c4d4d2b15">
-    <mxGraphModel dx="713" dy="1325" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1061" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -716,7 +716,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Kelola Cuti" id="42c4d33b-df59-49db-a686-ca746f6cece2">
-    <mxGraphModel dx="1563" dy="1325" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1414" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -809,6 +809,670 @@
         <mxCell id="1bVfMxF2tuAB0FMJuFsm-2" connectable="0" parent="TQ3trmOyA2Fp1PTHQD4--87" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ya" vertex="1">
           <mxGeometry relative="1" x="-0.7422" y="1" as="geometry">
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Login Petugas" id="petugas_login">
+    <mxGraphModel dx="1563" dy="1325" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="petugas_login_outer" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;strokeColor=#FF0000;fillColor=#FFFFC0;" value="Login Petugas" vertex="1">
+          <mxGeometry height="1160" width="700" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_actor" parent="petugas_login_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Petugas" vertex="1">
+          <mxGeometry height="1140" width="350" x="0" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_system" parent="petugas_login_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Sistem" vertex="1">
+          <mxGeometry height="1140" width="350" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_start" parent="petugas_login_actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_0" parent="petugas_login_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Membuka halaman login" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_1" parent="petugas_login_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengisi username dan password" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_2" parent="petugas_login_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Klik tombol &#39;Login&#39;" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_3" parent="petugas_login_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Memvalidasi kredensial" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_4" parent="petugas_login_actor" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Kredensial valid?" vertex="1">
+          <mxGeometry height="70" width="100" x="120" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_5" parent="petugas_login_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan dashboard" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_6" parent="petugas_login_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan pesan kesalahan" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_end" parent="petugas_login_system" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_e_start" edge="1" parent="petugas_login_actor" source="petugas_login_start" target="petugas_login_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_e1" edge="1" parent="petugas_login_outer" source="petugas_login_0" target="petugas_login_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_e2" edge="1" parent="petugas_login_outer" source="petugas_login_1" target="petugas_login_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_e3" edge="1" parent="petugas_login_outer" source="petugas_login_2" target="petugas_login_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_e4_yes" edge="1" parent="petugas_login_outer" source="petugas_login_4" target="petugas_login_5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_e4_yes-label" connectable="0" parent="petugas_login_e4_yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ya" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="petugas_login_e4_no" edge="1" parent="petugas_login_outer" source="petugas_login_4" target="petugas_login_6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_e4_no-label" connectable="0" parent="petugas_login_e4_no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Tidak" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="petugas_login_e_end" edge="1" parent="petugas_login_outer" source="petugas_login_5" target="petugas_login_end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_retry" edge="1" parent="petugas_login_outer" source="petugas_login_6" target="petugas_login_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_login_retry-label" connectable="0" parent="petugas_login_retry" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ulangi">
+          <mxGeometry relative="1" x="-0.2" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Membuat Laporan Pengerjaan Tugas" id="petugas_report">
+    <mxGraphModel dx="1704" dy="1071" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="petugas_report_outer" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;strokeColor=#FF0000;fillColor=#FFFFC0;" value="Membuat Laporan Pengerjaan Tugas" vertex="1">
+          <mxGeometry height="1160" width="700" x="70" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_e1" edge="1" parent="petugas_report_outer" source="petugas_report_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report_1" value="">
+          <mxGeometry relative="1" x="0.76" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_actor" parent="petugas_report_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Petugas" vertex="1">
+          <mxGeometry height="1140" width="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_start" parent="petugas_report_actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_0" parent="petugas_report_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Membuka daftar tugas" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_e_start" edge="1" parent="petugas_report_actor" source="petugas_report_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report_0" value="">
+          <mxGeometry relative="1" x="0.68" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_1" parent="petugas_report_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Memilih tugas yang akan dilaporkan" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="LHomIeldD16CjujY0W-4-2" edge="1" parent="petugas_report_actor" source="petugas_report_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;endArrow=open;endFill=0;strokeColor=#FF0000;" target="LHomIeldD16CjujY0W-4-1" value="">
+          <mxGeometry relative="1" x="0.2" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_2" parent="petugas_report_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengisi laporan pengerjaan" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_3" parent="petugas_report_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengirim laporan" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="LHomIeldD16CjujY0W-4-1" parent="petugas_report_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengunggah foto pengerjaan" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="VzQ4RPei9mPTI2ah49em-1" edge="1" parent="petugas_report_outer" source="petugas_report_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report_4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_e5" edge="1" parent="petugas_report_outer" source="petugas_report_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="petugas_report_2" value="">
+          <mxGeometry relative="1" x="-0.2571" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="280" />
+              <mxPoint x="175" y="280" />
+            </Array>
+            <mxPoint x="180" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VzQ4RPei9mPTI2ah49em-3" edge="1" parent="petugas_report_outer" source="petugas_report_7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VzQ4RPei9mPTI2ah49em-4" edge="1" parent="petugas_report_outer" source="petugas_report_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report_8">
+          <mxGeometry relative="1" x="0.0025" as="geometry">
+            <Array as="points">
+              <mxPoint x="175" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LHomIeldD16CjujY0W-4-3" edge="1" parent="petugas_report_outer" source="LHomIeldD16CjujY0W-4-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;endArrow=open;endFill=0;strokeColor=#FF0000;" target="petugas_report_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_system" parent="petugas_report_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Sistem" vertex="1">
+          <mxGeometry height="1140" width="350" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_9" parent="petugas_report_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan pesan kesalahan" vertex="1">
+          <mxGeometry height="50" width="100" x="240" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_4" parent="petugas_report_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan form laporan" vertex="1">
+          <mxGeometry height="50" width="160" x="40" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="SvKB5KoWbQX2Z18th-q4-1" edge="1" parent="petugas_report_system" source="petugas_report_5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report_6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_5" parent="petugas_report_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Memvalidasi input laporan" vertex="1">
+          <mxGeometry height="50" width="160" x="55" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_7" parent="petugas_report_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menyimpan data laporan" vertex="1">
+          <mxGeometry height="50" width="160" x="55" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="CBwhqEFYgb_0PDkW-YZe-3" edge="1" parent="petugas_report_system" source="petugas_report_8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report_end" value="">
+          <mxGeometry relative="1" x="0.4" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_8" parent="petugas_report_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan notifikasi berhasil" vertex="1">
+          <mxGeometry height="50" width="160" x="55" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_end" parent="petugas_report_system" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="120" y="775" as="geometry" />
+        </mxCell>
+        <mxCell id="CBwhqEFYgb_0PDkW-YZe-2" edge="1" parent="petugas_report_system" source="petugas_report_6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report_9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CBwhqEFYgb_0PDkW-YZe-4" connectable="0" parent="CBwhqEFYgb_0PDkW-YZe-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Tidak" vertex="1">
+          <mxGeometry relative="1" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="petugas_report_6" parent="petugas_report_system" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Data laporan valid?" vertex="1">
+          <mxGeometry height="70" width="100" x="85" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_e6_yes" edge="1" parent="petugas_report_system" source="petugas_report_6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report_7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report_e6_yes-label" connectable="0" parent="petugas_report_e6_yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ya" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Melihat Daftar Riwayat Tugas" id="petugas_task-history">
+    <mxGraphModel dx="1704" dy="1071" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="petugas_task-history_outer" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;strokeColor=#FF0000;fillColor=#FFFFC0;" value="Melihat Daftar Riwayat Tugas" vertex="1">
+          <mxGeometry height="1160" width="700" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_actor" parent="petugas_task-history_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Petugas" vertex="1">
+          <mxGeometry height="1140" width="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_start" parent="petugas_task-history_actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_0" parent="petugas_task-history_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengakses menu Tugas" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_1" parent="petugas_task-history_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Memilih riwayat tugas" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_e_start" edge="1" parent="petugas_task-history_actor" source="petugas_task-history_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_task-history_0" value="">
+          <mxGeometry relative="1" x="0.5273" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_system" parent="petugas_task-history_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Sistem" vertex="1">
+          <mxGeometry height="1140" width="350" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sy35IP8pDO8PHz9DlkXs-1" edge="1" parent="petugas_task-history_system" source="petugas_task-history_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_task-history_3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_2" parent="petugas_task-history_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengambil data riwayat tugas" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_3" parent="petugas_task-history_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan daftar riwayat tugas" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_end" parent="petugas_task-history_system" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_e_end" edge="1" parent="petugas_task-history_system" source="petugas_task-history_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_task-history_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_e1" edge="1" parent="petugas_task-history_outer" source="petugas_task-history_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_task-history_1" value="">
+          <mxGeometry relative="1" x="0.0222" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_task-history_e2" edge="1" parent="petugas_task-history_outer" source="petugas_task-history_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_task-history_2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Melihat Kuota Cuti" id="petugas_leave-quota">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="petugas_leave-quota_outer" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;strokeColor=#FF0000;fillColor=#FFFFC0;" value="Melihat Kuota Cuti" vertex="1">
+          <mxGeometry height="1160" width="700" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-quota_actor" parent="petugas_leave-quota_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Petugas" vertex="1">
+          <mxGeometry height="1140" width="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-quota_start" parent="petugas_leave-quota_actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-quota_0" parent="petugas_leave-quota_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengakses menu Cuti" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-quota_e_start" edge="1" parent="petugas_leave-quota_actor" source="petugas_leave-quota_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-quota_0" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-quota_system" parent="petugas_leave-quota_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Sistem" vertex="1">
+          <mxGeometry height="1140" width="350" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ustr6yCTedUvAFRHqJpY-1" edge="1" parent="petugas_leave-quota_system" source="petugas_leave-quota_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-quota_2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-quota_1" parent="petugas_leave-quota_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menghitung sisa kuota cuti" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-quota_2" parent="petugas_leave-quota_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan kuota cuti" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-quota_end" parent="petugas_leave-quota_system" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-quota_e_end" edge="1" parent="petugas_leave-quota_system" source="petugas_leave-quota_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-quota_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-quota_e1" edge="1" parent="petugas_leave-quota_outer" source="petugas_leave-quota_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-quota_1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Mengajukan Cuti" id="petugas_leave-request">
+    <mxGraphModel dx="1537" dy="966" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="petugas_leave-request_outer" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;strokeColor=#FF0000;fillColor=#FFFFC0;" value="Mengajukan Cuti" vertex="1">
+          <mxGeometry height="1160" width="700" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_actor" parent="petugas_leave-request_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Petugas" vertex="1">
+          <mxGeometry height="1140" width="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_start" parent="petugas_leave-request_actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_0" parent="petugas_leave-request_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengakses menu Cuti" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_e_start" edge="1" parent="petugas_leave-request_actor" source="petugas_leave-request_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-request_0" value="">
+          <mxGeometry relative="1" x="0.5273" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_1" parent="petugas_leave-request_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengisi form pengajuan cuti" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_2" parent="petugas_leave-request_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengirim pengajuan" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_e2" edge="1" parent="petugas_leave-request_actor" source="petugas_leave-request_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-request_2" value="">
+          <mxGeometry relative="1" x="0.5273" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_system" parent="petugas_leave-request_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Sistem" vertex="1">
+          <mxGeometry height="1140" width="350" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LUblnkFPl92cyRJUcXZl-2" edge="1" parent="petugas_leave-request_system" source="petugas_leave-request_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;endArrow=open;endFill=0;strokeColor=#FF0000;" target="petugas_leave-request_4" value="">
+          <mxGeometry relative="1" x="0.4615" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_3" parent="petugas_leave-request_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Memvalidasi pengajuan cuti" vertex="1">
+          <mxGeometry height="50" width="160" x="20" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="LUblnkFPl92cyRJUcXZl-5" edge="1" parent="petugas_leave-request_system" source="petugas_leave-request_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;endArrow=open;endFill=0;strokeColor=#FF0000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="petugas_leave-request_7" value="">
+          <mxGeometry relative="1" x="0.8333" as="geometry">
+            <mxPoint y="368" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LUblnkFPl92cyRJUcXZl-6" connectable="0" parent="LUblnkFPl92cyRJUcXZl-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Tidak" vertex="1">
+          <mxGeometry relative="1" x="0.8333" y="-2" as="geometry">
+            <mxPoint x="-26" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LUblnkFPl92cyRJUcXZl-8" edge="1" parent="petugas_leave-request_system" source="petugas_leave-request_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;endArrow=open;endFill=0;strokeColor=#FF0000;" target="petugas_leave-request_5" value="">
+          <mxGeometry relative="1" x="0.1163" as="geometry" />
+        </mxCell>
+        <mxCell id="LUblnkFPl92cyRJUcXZl-9" connectable="0" parent="LUblnkFPl92cyRJUcXZl-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Ya" vertex="1">
+          <mxGeometry relative="1" x="0.0698" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="petugas_leave-request_4" parent="petugas_leave-request_system" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Pengajuan valid?" vertex="1">
+          <mxGeometry height="70" width="100" x="50" y="333" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_5" parent="petugas_leave-request_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menyimpan pengajuan cuti" vertex="1">
+          <mxGeometry height="50" width="160" x="20" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_7" parent="petugas_leave-request_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan pesan kesalahan" vertex="1">
+          <mxGeometry height="50" width="130" x="200" y="343" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_e_end" edge="1" parent="petugas_leave-request_system" source="petugas_leave-request_6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-request_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_6" parent="petugas_leave-request_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan notifikasi berhasil" vertex="1">
+          <mxGeometry height="50" width="160" x="20" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_end" parent="petugas_leave-request_system" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="85" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_e6" edge="1" parent="petugas_leave-request_system" source="petugas_leave-request_5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-request_6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_e1" edge="1" parent="petugas_leave-request_outer" source="petugas_leave-request_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-request_1" value="">
+          <mxGeometry relative="1" x="0.2" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_e3" edge="1" parent="petugas_leave-request_outer" source="petugas_leave-request_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-request_3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-request_retry" edge="1" parent="petugas_leave-request_outer" source="petugas_leave-request_7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-request_1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="605" y="225" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="petugas_leave-request_retry-label" connectable="0" parent="petugas_leave-request_retry" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ulangi">
+          <mxGeometry relative="1" x="-0.2" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Melihat Riwayat Cuti" id="petugas_leave-history">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="petugas_leave-history_outer" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;strokeColor=#FF0000;fillColor=#FFFFC0;" value="Melihat Riwayat Cuti" vertex="1">
+          <mxGeometry height="1160" width="700" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_actor" parent="petugas_leave-history_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Petugas" vertex="1">
+          <mxGeometry height="1140" width="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_start" parent="petugas_leave-history_actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_0" parent="petugas_leave-history_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengakses menu Cuti" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_1" parent="petugas_leave-history_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Memilih riwayat cuti" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_e_start" edge="1" parent="petugas_leave-history_actor" source="petugas_leave-history_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-history_0" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_system" parent="petugas_leave-history_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Sistem" vertex="1">
+          <mxGeometry height="1140" width="350" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="7Es94mS9aMR5RoRDvL7--2" edge="1" parent="petugas_leave-history_system" source="petugas_leave-history_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-history_3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_2" parent="petugas_leave-history_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengambil data riwayat cuti" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_3" parent="petugas_leave-history_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan daftar riwayat cuti" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_end" parent="petugas_leave-history_system" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_e_end" edge="1" parent="petugas_leave-history_system" source="petugas_leave-history_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-history_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_e1" edge="1" parent="petugas_leave-history_outer" source="petugas_leave-history_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-history_1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_leave-history_e2" edge="1" parent="petugas_leave-history_outer" source="petugas_leave-history_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_leave-history_2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Melihat Daftar Penilaian" id="petugas_evaluation-list">
+    <mxGraphModel dx="1414" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="petugas_evaluation-list_outer" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;strokeColor=#FF0000;fillColor=#FFFFC0;" value="Melihat Daftar Penilaian" vertex="1">
+          <mxGeometry height="1160" width="700" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_evaluation-list_actor" parent="petugas_evaluation-list_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Petugas" vertex="1">
+          <mxGeometry height="1140" width="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_evaluation-list_start" parent="petugas_evaluation-list_actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_evaluation-list_0" parent="petugas_evaluation-list_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengakses menu Penilaian" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_evaluation-list_e_start" edge="1" parent="petugas_evaluation-list_actor" source="petugas_evaluation-list_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_evaluation-list_0" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_evaluation-list_system" parent="petugas_evaluation-list_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Sistem" vertex="1">
+          <mxGeometry height="1140" width="350" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QNN_tBtsQyp3OuMCg5x7-1" edge="1" parent="petugas_evaluation-list_system" source="petugas_evaluation-list_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_evaluation-list_2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_evaluation-list_1" parent="petugas_evaluation-list_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengambil data penilaian" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_evaluation-list_end" parent="petugas_evaluation-list_system" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_evaluation-list_e_end" edge="1" parent="petugas_evaluation-list_system" source="petugas_evaluation-list_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_evaluation-list_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_evaluation-list_2" parent="petugas_evaluation-list_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan daftar penilaian" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_evaluation-list_e1" edge="1" parent="petugas_evaluation-list_outer" source="petugas_evaluation-list_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_evaluation-list_1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Mengajukan Banding" id="petugas_appeal">
+    <mxGraphModel dx="1414" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="petugas_appeal_outer" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;strokeColor=#FF0000;fillColor=#FFFFC0;" value="Mengajukan Banding" vertex="1">
+          <mxGeometry height="1160" width="700" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_actor" parent="petugas_appeal_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Petugas" vertex="1">
+          <mxGeometry height="1140" width="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_start" parent="petugas_appeal_actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_e_start" edge="1" parent="petugas_appeal_actor" source="petugas_appeal_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_appeal_0" value="">
+          <mxGeometry relative="1" x="0.4" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_1" parent="petugas_appeal_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Memilih penilaian" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_2" parent="petugas_appeal_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengisi alasan banding" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_3" parent="petugas_appeal_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengirim banding" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_e1" edge="1" parent="petugas_appeal_actor" source="petugas_appeal_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_appeal_1" value="">
+          <mxGeometry relative="1" x="0.0182" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_e2" edge="1" parent="petugas_appeal_actor" source="petugas_appeal_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_appeal_2" value="">
+          <mxGeometry relative="1" x="0.0182" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_e3" edge="1" parent="petugas_appeal_actor" source="petugas_appeal_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_appeal_3" value="">
+          <mxGeometry relative="1" x="0.0182" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_0" parent="petugas_appeal_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengakses menu Penilaian" vertex="1">
+          <mxGeometry height="50" width="160" x="95" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_e4" edge="1" parent="petugas_appeal_outer" source="petugas_appeal_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_appeal_4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNiT-xsf8yAHSktySP3J-4" edge="1" parent="petugas_appeal_outer" source="petugas_appeal_8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_appeal_2">
+          <mxGeometry relative="1" x="0.0111" as="geometry">
+            <Array as="points">
+              <mxPoint x="625" y="295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="petugas_appeal_system" parent="petugas_appeal_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Sistem" vertex="1">
+          <mxGeometry height="1140" width="350" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_8" parent="petugas_appeal_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan pesan kesalahan" vertex="1">
+          <mxGeometry height="50" width="110" x="220" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_end" parent="petugas_appeal_system" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="111" y="725" as="geometry" />
+        </mxCell>
+        <mxCell id="fNiT-xsf8yAHSktySP3J-2" edge="1" parent="petugas_appeal_system" source="petugas_appeal_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_appeal_5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_4" parent="petugas_appeal_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Memvalidasi data banding" vertex="1">
+          <mxGeometry height="50" width="160" x="46" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_6" parent="petugas_appeal_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menyimpan pengajuan banding" vertex="1">
+          <mxGeometry height="50" width="160" x="46" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_7" parent="petugas_appeal_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan notifikasi berhasil" vertex="1">
+          <mxGeometry height="50" width="160" x="46" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_e7" edge="1" parent="petugas_appeal_system" source="petugas_appeal_6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_appeal_7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNiT-xsf8yAHSktySP3J-1" edge="1" parent="petugas_appeal_system" source="petugas_appeal_5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_appeal_8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNiT-xsf8yAHSktySP3J-3" connectable="0" parent="fNiT-xsf8yAHSktySP3J-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Tidak" vertex="1">
+          <mxGeometry relative="1" x="0.0286" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="petugas_appeal_5" parent="petugas_appeal_system" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Data banding valid?" vertex="1">
+          <mxGeometry height="70" width="100" x="76" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_e5_yes" edge="1" parent="petugas_appeal_system" source="petugas_appeal_5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_appeal_6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_appeal_e5_yes-label" connectable="0" parent="petugas_appeal_e5_yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ya" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="petugas_appeal_e_end" edge="1" parent="petugas_appeal_system" source="petugas_appeal_7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_appeal_end" value="">
+          <mxGeometry relative="1" x="0.6667" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Melihat Log Laporan" id="petugas_report-log">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="petugas_report-log_outer" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;strokeColor=#FF0000;fillColor=#FFFFC0;" value="Melihat Log Laporan" vertex="1">
+          <mxGeometry height="920" width="760" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_actor" parent="petugas_report-log_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Petugas" vertex="1">
+          <mxGeometry height="900" width="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_start" parent="petugas_report-log_actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_access" parent="petugas_report-log_actor" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengakses halaman Log Laporan" vertex="1">
+          <mxGeometry height="60" width="160" x="95" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_e1" edge="1" parent="petugas_report-log_actor" source="petugas_report-log_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report-log_access" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WXRDtZqtVHXIiSKSYkOg-2" edge="1" parent="petugas_report-log_outer" source="petugas_report-log_access" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=open;endFill=0;strokeColor=#FF0000;" target="petugas_report-log_fetch">
+          <mxGeometry relative="1" x="0.4345" as="geometry">
+            <mxPoint x="260" y="250" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="petugas_report-log_system" parent="petugas_report-log_outer" style="swimlane;startSize=20;html=1;strokeColor=#FF0000;" value="Sistem" vertex="1">
+          <mxGeometry height="900" width="410" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_end" parent="petugas_report-log_system" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="115" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="HVc3sT7vAWbJOLv3pIU5-3" edge="1" parent="petugas_report-log_system" source="HVc3sT7vAWbJOLv3pIU5-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;endArrow=open;endFill=0;strokeColor=#FF0000;" target="petugas_report-log_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_e4_yes" edge="1" parent="petugas_report-log_system" source="petugas_report-log_available" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report-log_list" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_e4_yes-label" connectable="0" parent="petugas_report-log_e4_yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ya" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="petugas_report-log_fetch" parent="petugas_report-log_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mengambil data log laporan" vertex="1">
+          <mxGeometry height="60" width="160" x="50" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_available" parent="petugas_report-log_system" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Data tersedia?" vertex="1">
+          <mxGeometry height="100" width="100" x="80" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_list" parent="petugas_report-log_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan log laporan beserta status" vertex="1">
+          <mxGeometry height="60" width="180" x="40" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_e3" edge="1" parent="petugas_report-log_system" source="petugas_report-log_fetch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report-log_available" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_e7" edge="1" parent="petugas_report-log_system" source="petugas_report-log_list" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="390" as="sourcePoint" />
+            <mxPoint x="130" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HVc3sT7vAWbJOLv3pIU5-1" parent="petugas_report-log_system" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="115" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_empty" parent="petugas_report-log_system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Menampilkan tabel kosong dengan pesan data belum tersedia" vertex="1">
+          <mxGeometry height="60" width="150" x="235" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_e4_no" edge="1" parent="petugas_report-log_system" source="petugas_report-log_available" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;" target="petugas_report-log_empty" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas_report-log_e4_no-label" connectable="0" parent="petugas_report-log_e4_no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Tidak" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HVc3sT7vAWbJOLv3pIU5-2" edge="1" parent="petugas_report-log_system" source="petugas_report-log_empty" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;endArrow=open;endFill=0;strokeColor=#FF0000;" target="HVc3sT7vAWbJOLv3pIU5-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="515" />
+            </Array>
           </mxGeometry>
         </mxCell>
       </root>

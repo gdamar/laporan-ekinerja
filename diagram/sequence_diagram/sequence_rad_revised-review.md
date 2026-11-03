@@ -152,3 +152,63 @@ Perbaikan iterasi ke-3 telah diimplementasikan pada berkas [sequence_rad_revised
 ## Page Approval Cuti
 
 - [ ] Gabung operasi View, Aprroved dan Decline menjadi satu diagram
+
+---
+
+# Sequence Diagram Review - Iterasi Petugas
+
+Implementasi sequence diagram Petugas dibuat pada salinan:
+`sequence_rad_revised_petugas_updated.drawio`.
+
+## Halaman yang ditambahkan
+
+- Login Petugas
+- Membuat Laporan Pengerjaan Tugas
+- Melihat Log Laporan
+- Melihat Daftar Riwayat Tugas
+- Melihat Kuota Cuti
+- Mengajukan Cuti
+- Melihat Riwayat Cuti
+- Melihat Daftar Penilaian
+- Mengajukan Banding
+
+## Ketentuan yang diterapkan
+
+- Setiap halaman memakai maksimal empat objek: `Petugas`, boundary fitur,
+  `Sistem`, dan `Database`.
+- Aktor menggunakan shape `umlActor` sesuai ketentuan project.
+- Message utama menggunakan panah solid dan response menggunakan panah
+  dashed/open.
+- Kondisi alternatif menggunakan frame `alt` dengan label kasus independen
+  dalam format `[Nama kondisi]`.
+- Activation box dibuat tersegmentasi berdasarkan fase input, pemrosesan,
+  transaksi Database, dan penyajian hasil.
+- Detail upload bukti, lampiran, status, kuota, log, dan banding disampaikan
+  melalui message umum tanpa menambahkan objek teknis baru.
+
+## Validasi yang perlu dipertahankan
+
+- Tidak ada decision diamond pada sequence diagram.
+- Tidak ada activation box monolitik sepanjang lifeline.
+- Panah message harus terhubung ke activation box pengirim dan penerima.
+- Diagram sumber existing tidak ditimpa; perubahan berada pada salinan
+  `_petugas_updated`.
+
+## Revisi Penamaan dan Penempatan Message
+
+Halaman Petugas diselaraskan kembali dengan pola pada
+`sequence_rad_revised_v2.drawio`:
+
+- Request diberi nama tindakan umum seperti `Minta ...`, `Ambil ...`,
+  `Periksa ...`, atau `Membuka ...`.
+- Response diberi nama `Mengembalikan ...`, `Menampilkan ...`, atau
+  `Menampilkan status ...`.
+- Request dan response ditempatkan berurutan pada activation box yang sesuai:
+  Petugas/boundary mengirim permintaan, Sistem meneruskan ke Database,
+  Database mengembalikan hasil ke Sistem, lalu Sistem/boundary menyajikan
+  hasil ke Petugas.
+- Setiap panah memiliki source dan target activation yang eksplisit serta
+  koordinat vertikal yang meningkat mengikuti urutan waktu.
+- Frame alternatif ditempatkan setelah alur utama dengan label `alt`,
+  label kasus `[Nama kondisi]`, dan label `else` sebagai elemen teks
+  independen.
