@@ -1,5 +1,10 @@
 # Todo
 
+## Sequence Diagram
+
+- Petugas
+- [-] Untuk sequence diagram "melihat x", alternative frame dan isinya dimasukin sebelum response "menampilkan x"
+
 ## Activity Diagram
 
 - [x] Update flow activity diagram kelola penilaian sama cuti (Review ulang flow seharusnya kaya gimana)
