@@ -212,3 +212,64 @@ Halaman Petugas diselaraskan kembali dengan pola pada
 - Frame alternatif ditempatkan setelah alur utama dengan label `alt`,
   label kasus `[Nama kondisi]`, dan label `else` sebagai elemen teks
   independen.
+
+---
+
+# Sequence Diagram Review - Iterasi Petugas (Revisi Geometri & Alur Detail Frame)
+
+Dokumentasi ini mencatat perbaikan menyeluruh pada ke-9 sequence diagram aktor Petugas (Halaman 13 s.d. 21) pada berkas sequence_rad_revised_petugas_updated.drawio.
+
+## Permasalahan yang Diperbaiki
+
+1. **Ketidaksesuaian Geometri Panah & Hooking Activation Box**:
+   - Menghilangkan seluruh panah miring/diagonal (y_source != y_target).
+   - Seluruh panah horizontal kini memiliki koordinat y_source == y_target yang presisi.
+   - Titik awal dan akhir panah dihubungkan (hooked) langsung ke tepi luar activation box (x=108, 312, 328, 532, 548, 752) tanpa melayang (dangling) atau menusuk ke garis tengah lifeline.
+   - Segmentasi activation box disesuaikan dengan rentang aktif proses dan idle ketika menunggu respon database/pengguna.
+
+2. **Proporsionalitas dan Kelengkapan Alur pada Alternative Frame**:
+   - Memindahkan penempatan alternative frame alt dari posisi bawah yang terisolasi (y=700) ke titik percabangan logika/validasi yang tepat.
+   - Melengkapi seluruh tahapan interaksi di dalam frame:
+     - **Diagram Input/Transaksi (Login Petugas, Membuat Laporan Pengerjaan Tugas, Mengajukan Cuti, Mengajukan Banding)**: Memuat alur lengkap pengisian form/data, pengiriman request, validasi internal Sistem, cabang berhasil (insert/update DB, konfirmasi sukses, redirect/notifikasi), dan cabang gagal (else / pesan kesalahan validasi).
+     - **Diagram Pembacaan/Daftar/Kuota (Melihat Log Laporan, Melihat Daftar Riwayat Tugas, Melihat Kuota Cuti, Melihat Riwayat Cuti, Melihat Daftar Penilaian)**: Memuat kueri data ke Database, pengecekan ketersediaan data, cabang data tersedia (tampilan tabel/kartu rincian, dan detail log), serta cabang data kosong (else / pesan data belum tersedia).
+
+3. **Integritas Halaman**:
+   - Halaman 1 s.d. 12 (Operator dan Kepala Seksi) dipertahankan 100% utuh tanpa modifikasi apa pun sesuai instruksi.
+   - Sembilan halaman Petugas (Halaman 13 s.d. 21) telah tervalidasi secara sintaks XML, bebas kemiringan panah, dan mematuhi konvensi 4 objek UML.
+
+---
+
+# Sequence Diagram Review - Iterasi Konstruksi Objek Lifeline
+
+Dokumentasi ini mencatat penyeragaman konstruksi objek pada seluruh halaman
+`sequence_rad_revised_petugas_updated.drawio`, mengikuti halaman acuan
+**Membuat Laporan Pengerjaan Tugas**.
+
+## Permasalahan yang Diperbaiki
+
+- Objek boundary, control, dan entity sebelumnya digambar sebagai rounded
+  rectangle dengan nama di dalam kotak, ditambah edge lifeline putus-putus
+  terpisah; aktor memakai shape `umlActor` tanpa lifeline menyatu.
+- Konstruksi tersebut tidak memakai notasi lifeline UML sehingga bentuk objek
+  berbeda antar halaman.
+
+## Perubahan
+
+- Setiap objek kini berupa satu cell `shape=umlLifeline` dengan properti
+  `participant` sesuai peran: `umlActor`, `umlBoundary`, `umlControl`, dan
+  `umlEntity`. Objek Storage pada halaman Verifikasi Completion dipetakan ke
+  `umlEntity`.
+- Nama objek menjadi label teks terpisah di atas lifeline (y=65, bold, rata
+  tengah), bukan lagi teks di dalam kotak objek.
+- Edge lifeline putus-putus lama dihapus karena lifeline sudah menjadi bagian
+  dari shape objek.
+- Posisi horizontal objek dipertahankan (x pusat 100, 320, 540, 760, dan 980
+  pada halaman Verifikasi Completion), demikian pula batas bawah lifeline.
+
+## Hasil Validasi
+
+- 21 halaman, XML valid, tanpa referensi `source`/`target`/`parent` yang
+  menggantung.
+- 81 objek dikonversi (20 halaman x 4 objek, ditambah objek Storage pada
+  halaman Verifikasi Completion); halaman acuan tidak diubah.
+- 93 edge lifeline lama dihapus dan seluruhnya berada tepat pada x pusat objek.
