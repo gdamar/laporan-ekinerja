@@ -36,14 +36,19 @@ Use the existing activity diagrams and reference images as the layout and naming
 Follow the notation rules in `diagram/diagram.md`:
 
 - Use UML stereotypes: `actor`, `boundary`, `control`, and `entity`.
-- Gunakan shape `umlActor` untuk objek aktor pada diagram Draw.io dengan style:
-  `shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;labelPerimeter=1;`
+- Gunakan `shape=umlLifeline` dengan properti `participant` yang sesuai (`umlActor`, `umlBoundary`, `umlControl`, `umlEntity`) untuk semua objek. Jangan gunakan shape `umlActor` standalone — aktor dan lifelinenya dibangun sebagai satu cell `shape=umlLifeline;participant=umlActor;...`.
+- Label nama objek diletakkan sebagai cell teks terpisah di atas lifeline (y≈65, `fontStyle=1`, rata tengah), **bukan** teks yang tertanam di dalam cell lifeline.
 - Use solid arrows for primary messages and dashed/open arrows for responses.
 - Use `alt` frames for alternatives; do not represent alternatives with flowchart diamonds.
 - Format penulisan nama alternative frame: shape frame bernilai murni `alt` (atau `loop`), dan label nama kasus dibungkus tanda kurung siku (misal `[Tambah]`, `[Ubah]`, `[Hapus]`, `[Pengajuan sesuai kriteria?]`) diletakkan di sebelah label `alt` sebagai elemen teks independen (child text element).
-- Activation boxes tidak boleh dibuat memanjang tunggal (monolitik), melainkan harus disegmentasi sesuai estimasi durasi dan fase aktif interaksi proses (idle saat menunggu respon atau di luar transaksi Database).
+- Label `else` pada frame `alt` juga merupakan cell teks independen, diletakkan di margin kiri frame pada Y garis pembatas. Garis pembatas `else` adalah edge dengan style `endArrow=none;dashed=1` dari x=40 ke x=820.
+- Diagram yang memiliki dua validasi berbeda (ketersediaan data + validasi aksi/status) menggunakan **dua frame `alt` terpisah secara vertikal** (bukan nested). Frame pertama mengecek ketersediaan data; frame kedua mengecek validasi kondisi bisnis/aksi.
+- Activation boxes tidak boleh dibuat memanjang tunggal (monolitik), melainkan harus disegmentasi per fase aktif: (1) load data, (2) aksi pengguna/form, (3) transaksi Database (hanya aktif selama kueri berlangsung hingga hasil dikembalikan), (4) notifikasi/respon. Jeda antar fase menampilkan garis lifeline putus-putus (idle).
+- Setiap panah pesan harus menggunakan koordinat absolut `sourcePoint` dan `targetPoint` dengan nilai Y yang **identik** (`y_source == y_target`). Panah diagonal atau miring (y berbeda) tidak diperbolehkan.
+- Validasi internal Sistem menggunakan `edgeStyle=orthogonalEdgeStyle` dengan target berupa sub-cell `perimeter=orthogonalPerimeter` (w=10, h≈40) di dalam lifeline Sistem, membentuk loopback persegi tanpa diagonal.
 - Pastikan panjang panah pesan presisi dan terhubung (*hooked*) langsung dari sisi activation box pengirim ke activation box penerima tanpa melayang (*dangling*). Teks pesan diposisikan tepat di atas garis panah.
 - Keep each diagram to a maximum of four objects: actor, boundary, control, and entity.
+- Gunakan sistem koordinat standar untuk diagram 4 objek: Aktor x=90 (center 100), Boundary x=295 (center 320), Sistem x=520 (center 540), Database x=740 (center 760). Lebar activation box standar 16px; sisi tepi untuk koneksi panah: 108↔312 (Aktor–Boundary), 328↔532 (Boundary–Sistem), 548↔752 (Sistem–Database). Frame `alt` menggunakan x=40, lebar w=780.
 - Use general, readable message descriptions rather than implementation-specific wording.
 - Use `Sistem` for the control object and `Database` for the entity object unless the existing diagram requires otherwise.
 - Tinjau dan perbarui dokumen review di `diagram/sequence_diagram/sequence_rad_revised-review.md` setiap kali menyelesaikan iterasi perbaikan sequence diagram.

@@ -151,7 +151,8 @@ Perbaikan iterasi ke-3 telah diimplementasikan pada berkas [sequence_rad_revised
 
 ## Page Approval Cuti
 
-- [ ] Gabung operasi View, Aprroved dan Decline menjadi satu diagram
+- [x] Gabung operasi View, Aprroved dan Decline menjadi satu diagram (tersedia pada halaman `approval_cuti_overview`)
+- [x] Sinkronisasi diagram `approval_cuti_setujui` dan `approval_cuti_tolak` dengan Use Case Scenario dan Activity Diagram dokumen TA Draft.
 
 ---
 
@@ -273,3 +274,125 @@ Dokumentasi ini mencatat penyeragaman konstruksi objek pada seluruh halaman
 - 81 objek dikonversi (20 halaman x 4 objek, ditambah objek Storage pada
   halaman Verifikasi Completion); halaman acuan tidak diubah.
 - 93 edge lifeline lama dihapus dan seluruhnya berada tepat pada x pusat objek.
+
+---
+
+# Sequence Diagram Review - Iterasi Revisi Halaman Approval Cuti
+
+Dokumentasi ini mencatat revisi dan standardisasi menyeluruh pada seluruh halaman bernama `approval_cuti` (`approval_cuti_overview`, `approval_cuti_setujui`, dan `approval_cuti_tolak`) pada berkas `sequence_rad_revised_petugas_updated.drawio`, diselaraskan dengan dokumen `draft_TA_20104057_Gregorius Damar(3).docx` (Use Case, Use Case Scenario Tabel 22 & 23, dan Activity Diagram Kelola Cuti) serta konvensi diagram acuan project.
+
+## 1. Analisis Kesenjangan & Temuan Awal
+
+Berdasarkan perbandingan diagram existing terhadap use case scenario dokumen TA draft:
+1. **Ketidaksesuaian Notasi Frame Alternatif**:
+   - Nilai frame sebelumnya diset langsung sebagai label (misal `val="alt Setujui"` dan `val="alt Tolak"`).
+   - Seharusnya `val="alt"` murni, dengan label anak independen dibungkus tanda kurung siku (seperti `[Status pengajuan sesuai (Menunggu Persetujuan)]` atau `[Tindakan: Setujui]`).
+2. **Ketiadaan Skenario Abnormal pada Diagram Persetujuan & Penolakan**:
+   - Scenario Use Case pada Tabel 22 ("Menyetujui cuti") dan Tabel 23 ("Menolak cuti") mensyaratkan: *"Jika status pengajuan tidak sesuai, sistem menolak perubahan dan menampilkan informasi bahwa keputusan tidak dapat diproses."*
+   - Pada diagram lama, tidak ada percabangan `else` atau pesan penolakan keputusan ketika status pengajuan tidak valid.
+3. **Activation Box Monolitik & Panah Melayang (Dangling)**:
+   - Diagram lama memakai activation box tunggal panjang (~540px) tanpa segmentasi jeda idle.
+   - Mayoritas panah pesan tidak terhubung (`source` dan `target` bernilai `None`).
+4. **Wording Spesifik SQL / Implementasi**:
+   - Pesan seperti `UPDATE status Disetujui` dan `SELECT pengajuan` diganti menjadi pesan bisnis/proses umum yang terbaca seperti `Simpan status Disetujui dan perbarui kuota cuti` dan `Ambil data pengajuan cuti`.
+
+## 2. Rincian Perbaikan per Halaman (Berdasarkan review_approval_cuti.md & Halaman Acuan 14–21)
+
+### Halaman `approval_cuti_overview` (id=`page_5`)
+- Mengacu pada halaman pembacaan/daftar cuti (seperti Halaman 19 `Melihat Riwayat Cuti`):
+  - Berfungsi sebagai halaman utama yang hanya menampilkan daftar pengajuan cuti.
+  - Tidak memuat alternative case tolak/setujui pada overview.
+  - Memuat alur pengambilan data pengajuan cuti berstatus Menunggu Persetujuan.
+  - Memuat **alternative frame `alt` untuk ketersediaan data**:
+    - Cabang `[Terdapat data pengajuan cuti]`: Sistem mengirimkan daftar pengajuan cuti & Boundary menampilkan daftar pengajuan cuti.
+    - Cabang `else`: Sistem mengembalikan status data cuti kosong & Boundary menampilkan pesan data cuti belum tersedia.
+
+### Halaman `approval_cuti_setujui` (id=`page_6`)
+- Sesuai Use Case Scenario Tabel 22 ("Menyetujui cuti") dan struktur acuan Halaman 18 (`Mengajukan Cuti`):
+  1. Pengguna membuka pengajuan cuti.
+  2. Sistem mengambil data & memeriksa ketersediaan data.
+  3. **Frame 1 (`alt [Data pengajuan cuti tersedia]`)**:
+     - Jika data ada: Sistem mengirim data pengajuan & antarmuka menampilkan detail pengajuan cuti.
+     - Jika data tidak ada (`else`): Boundary menampilkan pesan data pengajuan belum tersedia.
+  4. Pengguna memilih tindakan Setujui, Boundary menampilkan dialog konfirmasi, Pengguna mengonfirmasi keputusan, dan Boundary mengirim permohonan persetujuan.
+  5. Sistem memvalidasi status pengajuan.
+  6. **Frame 2 (`alt [Status pengajuan sesuai (Menunggu Persetujuan)]`)**:
+     - Cabang Valid: Sistem menyimpan status 'Disetujui' dan memperbarui kuota cuti ke Database, notifikasi sukses, dan data cuti diperbarui.
+     - Cabang Tidak Valid (`else`): Sistem menolak pemrosesan dan Boundary menampilkan pesan keputusan tidak dapat diproses.
+
+### Halaman `approval_cuti_tolak` (id=`page_7`)
+- Sesuai Use Case Scenario Tabel 23 ("Menolak cuti") dan struktur acuan Halaman 18 (`Mengajukan Cuti`):
+  1. Pengguna membuka pengajuan cuti.
+  2. Sistem mengambil data & memeriksa ketersediaan data.
+  3. **Frame 1 (`alt [Data pengajuan cuti tersedia]`)**:
+     - Jika data ada: Sistem mengirim data pengajuan & antarmuka menampilkan detail pengajuan cuti.
+     - Jika data tidak ada (`else`): Boundary menampilkan pesan data pengajuan belum tersedia.
+  4. Pengguna memilih tindakan Tolak, Boundary menampilkan form alasan penolakan, Pengguna mengisi alasan & mengonfirmasi keputusan, dan Boundary mengirim permohonan penolakan.
+  5. Sistem memvalidasi status pengajuan.
+  6. **Frame 2 (`alt [Status pengajuan sesuai (Menunggu Persetujuan)]`)**:
+     - Cabang Valid: Sistem menyimpan status 'Ditolak' beserta alasan penolakan ke Database, notifikasi penolakan berhasil, dan data cuti diperbarui.
+     - Cabang Tidak Valid (`else`): Sistem menolak pemrosesan dan Boundary menampilkan pesan keputusan tidak dapat diproses.
+
+## 3. Validasi Tata Letak Geometri Simetris (Standar Halaman 14–21)
+
+1. **Konstruksi 4 Objek Lifeline**:
+   - `participant_0`: Kepala Seksi (`participant=umlActor`, x=90, center x=100)
+   - `participant_1`: Approval Cuti (`participant=umlBoundary`, x=295, center x=320)
+   - `participant_2`: Sistem (`participant=umlControl`, x=520, center x=540)
+   - `participant_3`: Database (`participant=umlEntity`, x=740, center x=760)
+2. **Koordinat Horisontal Panah Presisi Bebas Kemiringan (FLAT-OK)**:
+   - Sesuai pola Halaman 14–21, panah pesan didefinisikan dengan titik absolut `sourcePoint` dan `targetPoint` pada nilai koordinat Y yang identik (`y_source == y_target`), sehingga seluruh garis pesan horizontal lurus sempurna tanpa miring/overlap:
+     - Antara Lifeline 0 dan Lifeline 1: span `108 <-> 312`
+     - Antara Lifeline 1 dan Lifeline 2: span `328 <-> 532`
+     - Antara Lifeline 2 dan Lifeline 3: span `548 <-> 752`
+   - Self-call validasi internal Sistem menggunakan `orthogonalEdgeStyle` loopback persegi presisi dari titik x=548 dengan `target` orthogonalPerimeter sub-box.
+3. **Alternative Frame dan Garis Pembatas (Divider)**:
+   - Frame `alt`: koordinat x=40, lebar w=780.
+   - Garis putus-putus pembatas percabangan `else`: koordinat dari (40, y) ke (820, y).
+   - Label percabangan dan label `else` diposisikan rapi di margin kiri frame.
+
+---
+
+# Iterasi Revisi Halaman Kelola (`kelola_tugas`, `kelola_petugas`, `kelola_akun`, `input_penilaian`)
+
+## 1. Latar Belakang & Scope
+- **File Target**: `diagram/sequence_diagram/sequence_rad_revised_petugas_updated.drawio`
+- **Halaman yang Direvisi**:
+  - `page_kelola_tugas` (Page 3, name: `kelola_tugas`)
+  - `page_kelola_petugas` (Page 10, name: `kelola_petugas`)
+  - `page_kelola_akun` (Page 11, name: `kelola_akun`)
+  - `page_3` (Page 5, name: `input_penilaian` — mewakili Kelola Penilaian)
+- **Primary Reference**: `draft_TA_20104057_Gregorius Damar(3).docx` (Use Case Diagram, Use Case Scenario, dan deskripsi Activity Diagram).
+- **Secondary Reference**: `diagram/activity/activity_rest_updated.drawio.xml` dan `diagram/usecase-scenario.md`.
+- **Layout Reference**: Halaman 14–21 (standar tata letak rapi, panah flat, koordinat standar 4 objek).
+
+## 2. Struktur Notasi & Standar Perbaikan
+1. **Aktor**: Menggunakan label `Operator/Kepala Seksi` sebagai cell teks independen di atas lifeline (`shape=umlLifeline;participant=umlActor;...`), mencakup wewenang kedua aktor sesuai Use Case Scenario di dokumen TA tanpa menambah jumlah objek.
+2. **Boundary**: `Kelola Tugas`, `Kelola Petugas`, `Kelola Akun`, dan `Kelola Penilaian` (`participant=umlBoundary`).
+3. **Control**: `Sistem` (`participant=umlControl`).
+4. **Entity**: `Database` (`participant=umlEntity`).
+5. **Koordinat Standar 4 Objek**:
+   - Actor: x=90 (center x=100)
+   - Boundary: x=295 (center x=320)
+   - Sistem: x=520 (center x=540)
+   - Database: x=740 (center x=760)
+   - Sisi hook panah: `108 <-> 312` (Actor–Boundary), `328 <-> 532` (Boundary–Sistem), `548 <-> 752` (Sistem–Database).
+6. **Panah Pesan Presisi (FLAT-OK)**:
+   - Seluruh panah pesan (38 panah pada tugas/petugas/akun, 36 panah pada penilaian) menggunakan nilai Y identik (`y_source == y_target`), zero skewed arrows.
+   - Pesan request berupa solid arrow (`endArrow=block;endFill=1`).
+   - Pesan response berupa dashed open arrow (`dashed=1;endArrow=open`).
+7. **Alternative Frame CRUD Terstruktur**:
+   - Frame `alt` utama (x=40, w=780, y=420):
+     - **Tugas & Petugas**: Cabang `[Tambah]`, `else [Ubah]`, dan `else [Hapus]`.
+     - **Akun**: Cabang `[Tambah]`, `else [Ubah]`, dan `else [Nonaktifkan]` (sesuai dokumen TA, tanpa hapus permanen).
+     - **Penilaian (`input_penilaian`)**:
+       - Cabang `[Tambah / Input Penilaian]`: Input nilai berdasarkan laporan tugas selesai.
+       - Divider `else` dengan label `[Ubah / Tindak Lanjut Banding]`: Meninjau data banding petugas. Terbagi menjadi sub-cabang `[Banding Disetujui]` (input nilai baru & perbarui status banding) dan `else [Banding Ditolak]` (perbarui status banding menjadi ditolak).
+       - Tidak ada operasi hapus (penilaian kinerja bersifat audit permanen). Penyetujuan/penolakan pembaruan nilai hanya dilakukan bila terdapat data pengajuan banding dari petugas.
+8. **Segmentasi Activation Box**:
+   - Activation box disegmentasi sesuai fase interaksi (Load data, Add, Edit/Banding, Delete/Deactivate).
+   - Database hanya aktif selama proses query berlangsung (h≈40–45px).
+   - Jeda antar fase menampilkan lifeline putus-putus (idle).
+9. **Validasi Internal Sistem (Self-Call)**:
+   - Menggunakan `edgeStyle=orthogonalEdgeStyle` loopback persegi presisi dari titik x=548 ke target sub-box `perimeter=orthogonalPerimeter` (w=10, h=35) di dalam lifeline Sistem.
+
