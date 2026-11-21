@@ -6,11 +6,13 @@
 - [x] Untuk sequence diagram "melihat x", alternative frame dan isinya dimasukin sebelum response "menampilkan x"
 
 - Operator dan Kepala Seksi
-- [ ] Revisi sequence diagram di semua halaman yang memiliki nama "Kelola" agar pesan dan alurnya jadi lebih spesifik
+- [x] Revisi sequence diagram di semua halaman yang memiliki nama "Kelola" agar pesan dan alurnya jadi lebih spesifik
 
 ## Activity Diagram
 
 - [x] Update flow activity diagram kelola penilaian sama cuti (Review ulang flow seharusnya kaya gimana)
+- [-] Buat activity diagram untuk use case petugas
+- [ ] Ubah aktor untuk cuti dan kelola tugas jadi **Kepala Seksi**
 
 ---
 
@@ -18,13 +20,12 @@
 
 - [x] Masukkin use case diagram operator sama kasi di laporan
 - [ ] Ubah akses kelola tugas dari operator jadi kepala seksi
-- [ ] Hilangin extend Menolak dan Menyetujui di Use Case Kelola Cuti
 
 ---
 
 ## Use Case Scenario
 
-- [ ] Update tahapannya biar sama kaya activity diagram
+- [x] Update tahapannya biar sama kaya activity diagram
 
 Use case scenario petugas yang masih belum ada:
 
@@ -55,8 +56,8 @@ Use case scenario petugas yang masih belum ada:
      - [x] Tambahkan pesan Petugas menginput alasan banding pada form.
      - [x] Tambahkan pesan submit dan query `INSERT/UPDATE data pengajuan banding` ke Database.
 2. **Koreksi Aktor dan Ejaan**:
-   - [ ] Ganti seluruh teks `Kepala Sesi` menjadi **`Kepala Seksi`**.
-   - [ ] Ubah aktor pada **Hal 9 (`Kelola Petugas`)** dan **Hal 10 (`Kelola Akun`)** dari `Kepala Sesi` menjadi **`Operator`** agar sesuai dengan Tabel 4.1 dan Gambar 4.4 Draft TA.
+   - [x] Ganti seluruh teks `Kepala Sesi` menjadi **`Kepala Seksi`**.
+   - [x] Ubah aktor pada **Hal 9 (`Kelola Petugas`)** dan **Hal 10 (`Kelola Akun`)** dari `Kepala Sesi` menjadi **`Operator`** agar sesuai dengan Tabel 4.1 dan Gambar 4.4 Draft TA.
 
 ### Prioritas 2 (Sedang - Penyelarasan Kualitas Skenario)
 
